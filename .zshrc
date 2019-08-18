@@ -98,8 +98,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-archey
+alias tiempo="curl 'es.wttr.in/Fuenlabrada?0'"
+alias tiempol="curl 'es.wttr.in/Fuenlabrada?'"
+alias luna="curl es.wttr.in/Moon"
+alias horah="while true; do tput clear; date +'%H : %M : %S' | figlet ; date +'%A, %d de %B de %Y'; sleep 1; done"
+alias hora="date +'%H : %M : %S' | figlet; date +'%A, %d de %B de %Y'"
+alias temp="python3 $HOME/temperatura.py"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
