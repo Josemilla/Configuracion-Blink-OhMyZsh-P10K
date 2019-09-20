@@ -31,7 +31,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -69,7 +69,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git colored-man-pages sudo zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -78,7 +78,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=es_ES.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -104,6 +104,7 @@ alias luna="curl es.wttr.in/Moon"
 alias horah="while true; do tput clear; date +'%H : %M : %S' | figlet ; date +'%A, %d de %B de %Y'; sleep 1; done"
 alias hora="date +'%H : %M : %S' | figlet; date +'%A, %d de %B de %Y'"
 alias temp="python3 $HOME/temperatura.py"
+alias temperaturas="echo \"RPi 4\" && vcgencmd measure_temp && echo \"Pi-hole papa\" && ssh papas.ddns.net -p 41098 'vcgencmd measure_temp' && echo \"Pi-hole\" && ssh pihole.local 'vcgencmd measure_temp' && echo \"RPi Zero\" && ssh rpizero.local 'vcgencmd measure_temp' && echo \"RetroPie\" && ssh retropie.local 'vcgencmd measure_temp'"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
